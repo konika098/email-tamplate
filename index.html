@@ -30,7 +30,7 @@
         width: 300px;
         height: 50px;
       }
-      .address{
+      .address {
         padding-top: 30px;
         line-height: 25px;
       }
@@ -46,12 +46,11 @@
         align-items: center;
         line-height: 25px;
       }
-      .invoice-date{
+      .invoice-date {
         display: flex;
         align-items: center;
         justify-content: end;
         text-align: end;
-       
       }
       .invoice-info div {
         flex: 1;
@@ -91,7 +90,6 @@
       .footer a {
         color: #fff;
         text-decoration: none;
-       
       }
       .buttons {
         text-align: right;
@@ -106,6 +104,147 @@
         margin-left: 10px;
         transition: background-color 0.3s;
       }
+
+      @media (max-width: 375px) {
+        .container {
+          width: 100%;
+          padding: 15px;
+          box-sizing: border-box;
+        }
+        .header {
+          flex-direction: column;
+          align-items: flex-start;
+          margin-bottom: 10px;
+        }
+        .company-info {
+          text-align: left;
+          padding-top: 10px;
+        }
+        .address, .company-info {
+          padding: 0;
+          line-height: 20px;
+          margin-bottom: 10px;
+        }
+        .invoice-info {
+          flex-direction: flex;
+          align-items: flex-start;
+          margin-bottom: 10px;
+        }
+        .invoice-info div {
+          padding: 0;
+          margin-bottom: 5px;
+        }
+        .invoice-date {
+          justify-content: flex-start;
+          text-align: left;
+        }
+        .logo {
+          max-width: 100%;
+          height: auto;
+          margin-top: 5px;
+        }
+        .footer {
+          flex-direction: column;
+          align-items: flex-start;
+          margin-top: 4px;
+        }
+        .buttons {
+          text-align: left;
+          margin-top: 10px;
+        }
+        .buttons button {
+          width: 100%;
+          margin-bottom: 5px;
+        }
+      }
+      @media (max-width: 1024px) {
+        .container {
+          width: 90%;
+          padding: 20px;
+          box-sizing: border-box;
+        }
+        .header {
+          flex-direction: column;
+          align-items: flex-start;
+          margin-top: 15px;
+        }
+        .company-info {
+          text-align: left;
+          padding-top: 20px;
+        }
+        .invoice-info {
+          display: flex;
+          align-items: flex-start;
+        }
+        .invoice-info div {
+          padding-top: 20px;
+          padding-bottom: 10px;
+        }
+        .invoice-date {
+          justify-content: flex-start;
+          text-align: left;
+        }
+        .logo {
+          max-width: 80%;
+          height: auto;
+          margin-top: 10px;
+        }
+        .address,
+        .company-info,
+        .invoice-info div,
+        .footer {
+          font-size: 13px;
+          line-height: 18px;
+        }
+        .buttons button {
+          padding: 6px 12px;
+          font-size: 11px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          width: 100%;
+          padding: 15px;
+          box-sizing: border-box;
+        }
+        .header {
+          flex-direction: column;
+          align-items: flex-start;
+          margin-bottom: 10px;
+        }
+        .company-info {
+          text-align: left;
+          padding-top: 10px;
+        }
+        .invoice-info {
+          display: flex;
+          align-items: flex-start;
+        }
+        .invoice-info div {
+          padding-top: 10px;
+        }
+        .invoice-date {
+          justify-content: flex-start;
+          text-align: left;
+        }
+        .logo {
+          max-width: 100%;
+          height: auto;
+          margin-top: 10px;
+        }
+        .address,
+        .company-info,
+        .invoice-info div,
+        .footer {
+          font-size: 12px;
+          line-height: 18px;
+        }
+        .buttons button {
+          padding: 6px 10px;
+          font-size: 10px;
+        }
+      }
     </style>
     <title>Invoice Template</title>
   </head>
@@ -119,16 +258,15 @@
             alt="Logo"
           />
           <div class="address">
-           <strong>107 Badajoz Road, North Ryde</strong>
+            <strong>107 Badajoz Road, North Ryde</strong>
             <br />
-           <strong> NSW – 2113 Sydney, Australia</strong><br />
-           <br>
+            <strong> NSW – 2113 Sydney, Australia</strong><br />
             Tel: +61 (0) 432 090 107
           </div>
         </div>
         <div class="company-info">
           <strong>Billed to: Duston Archer</strong>
-         <br />
+          <br />
           U2-107 Badajoz Road,<br />
           North Ryde, NSW<br />
           Sydney, Australia
@@ -139,16 +277,16 @@
           Invoice no:<br />
           <strong>#D001-001</strong>
         </div>
-       <div class="invoice-date">
-        <div>
-          Invoice date: <br>
-          Due date:
+        <div class="invoice-date">
+          <div>
+            Invoice date: <br />
+            Due date:
+          </div>
+          <div>
+            <strong>06/03/2019</strong><br />
+            <strong>11/03/2019</strong>
+          </div>
         </div>
-        <div>
-          <strong>06/03/2019</strong><br>
-          <strong>11/03/2019</strong>
-        </div>
-       </div>
       </div>
       <table class="table">
         <thead>
@@ -182,7 +320,7 @@
             <td></td>
             <td></td>
             <td><strong>Total:</strong></td>
-            <td> <strong>$698</strong></td>
+            <td><strong>$698</strong></td>
           </tr>
         </tbody>
       </table>
