@@ -15,66 +15,87 @@
         align-items: center;
         height: 100vh;
       }
-      table {
+      .container {
         width: 1047px;
         background-color: #202940;
-        border-collapse: collapse;
         border-radius: 10px;
-        overflow: hidden;
-        padding: 20px;
+        padding: 30px;
       }
-      .img {
+      .header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+      .logo {
         width: 300px;
         height: 50px;
-        margin-bottom: 10px;
       }
-      th,
-      td {
-        padding: 10px;
-        text-align: left;
-      }
-      .header,
-      .company-info,
-      .invoice-info {
-        padding: 20px;
+      .address{
+        padding-top: 30px;
+        line-height: 25px;
       }
       .company-info {
         text-align: right;
+        padding-top: 60px;
+        line-height: 25px;
       }
       .invoice-info {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: ;
+        align-items: center;
+        line-height: 25px;
+      }
+      .invoice-date{
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        text-align: end;
+       
+      }
+      .invoice-info div {
+        flex: 1;
+        margin: 0 10px;
+        padding-top: 60px;
+        padding-bottom: 30px;
+      }
+      .invoice-no {
+        font-size: 20px;
+        margin-top: 20px;
+      }
+      .table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+      .table th,
+      .table td {
+        padding: 10px;
         text-align: left;
+        border-bottom: 1px solid gray;
       }
-      .invoice-info1 {
-       display: flex;
-       flex-direction: column;
-       justify-content: end;
-      }
-      .in{
-        padding-bottom: 20px;
-      }
-      .invoice-total {
-        font-size: 1.2em;
-        padding-top: 10px;
+      .total {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 20px;
       }
       .footer {
         display: flex;
-        flex-direction: column;
         justify-content: space-between;
+        align-items: center;
+        margin-top: 80px;
+        padding-top: 10px;
         font-size: 0.9em;
-        color: #9aa6b2;
-        padding: 20px;
-        width: 100%;
+        line-height: 25px;
       }
-
       .footer a {
         color: #fff;
         text-decoration: none;
+       
       }
-
       .buttons {
-        padding: 0 20px 20px 20px;
+        text-align: right;
       }
-
       .buttons button {
         background-color: #358fed;
         border: none;
@@ -82,99 +103,107 @@
         padding: 10px 20px;
         border-radius: 5px;
         cursor: pointer;
+        margin-left: 10px;
         transition: background-color 0.3s;
       }
-      .footerSection{
-        display: flex;
-        justify-content: space-between;
-        padding-top: 10px;
-      }
-      .bottom{
-        border-bottom: 1px solid gray;
-        
-      }
-
     </style>
     <title>Invoice Template</title>
   </head>
   <body>
-    <table>
-      <tr>
-        <td colspan="4" class="header">
-          <img class="img" src="https://i.postimg.cc/jjVJ1zBD/DoshLogo.png" alt="" />
-          <br /><br />
-          107 Badajoz Road, North Ryde<br />
-          NSW – 2113 Sydney, Australia<br />
-          Tel: +61 (0) 432 090 107
-        </td>
-        <td colspan="2" class="company-info">
-          <strong>Billed to:</strong>
-          Duston Archer<br />
+    <div class="container">
+      <div class="header">
+        <div>
+          <img
+            class="logo"
+            src="https://i.postimg.cc/jjVJ1zBD/DoshLogo.png"
+            alt="Logo"
+          />
+          <div class="address">
+           <strong>107 Badajoz Road, North Ryde</strong>
+            <br />
+           <strong> NSW – 2113 Sydney, Australia</strong><br />
+           <br>
+            Tel: +61 (0) 432 090 107
+          </div>
+        </div>
+        <div class="company-info">
+          <strong>Billed to: Duston Archer</strong>
+         <br />
           U2-107 Badajoz Road,<br />
           North Ryde, NSW<br />
           Sydney, Australia
-        </td>
-      </tr>
-      <tr class="in">
-        <td colspan="2" class="invoice-info">
-          <strong>Invoice no:</strong><br />
-          #D001-001
-        </td>
-        <td colspan="1" class="invoice-info1">
-          Invoice date: 06/03/2019
-        </td>
-        <td colspan="1" class="invoice-info1">
-          Due date: 11/03/2019
-        </td>
-      </tr>
-      <tr class="bottom">
-        <th class="invoice-items">Item</th>
-        <th class="invoice-items">Qty</th>
-        <th class="invoice-items">Rate</th>
-        <th class="invoice-items">Amount</th>
-      </tr>
-      <tr class="bottom">
-        <td class="invoice-items">Premium Support</td>
-        <td class="invoice-items">1</td>
-        <td class="invoice-items">$9.00</td>
-        <td class="invoice-items">$9.00</td>
-      </tr>
-      <tr class="bottom">
-        <td class="invoice-items">Parts for service</td>
-        <td class="invoice-items">3</td>
-        <td class="invoice-items">$100.00</td>
-        <td class="invoice-items">$300.00</td>
-      </tr>
-      <tr class="bottom">
-        <td class="invoice-items">Service</td>
-        <td class="invoice-items">1</td>
-        <td class="invoice-items">$89.00</td>
-        <td class="invoice-items">$89.00</td>
-      </tr>
-      <tr class="bottom">
-        <td></td>
-        <td></td>
-        <td class="invoice-total"><strong>Total:</strong></td>
-        <td class="invoice-total"><strong>$698</strong></td>
-      </tr>
-      <tr class="footerSection">
-        <td colspan="4" class="footer">
+        </div>
+      </div>
+      <div class="invoice-info">
+        <div>
+          Invoice no:<br />
+          <strong>#D001-001</strong>
+        </div>
+       <div class="invoice-date">
+        <div>
+          Invoice date: <br>
+          Due date:
+        </div>
+        <div>
+          <strong>06/03/2019</strong><br>
+          <strong>11/03/2019</strong>
+        </div>
+       </div>
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Qty</th>
+            <th>Rate</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Premium Support</td>
+            <td>1</td>
+            <td>$9.00</td>
+            <td>$9.00</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>3</td>
+            <td>$100.00</td>
+            <td>$300.00</td>
+          </tr>
+          <tr>
+            <td>Parts for service</td>
+            <td>1</td>
+            <td>$89.00</td>
+            <td>$89.00</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td><strong>Total:</strong></td>
+            <td> <strong>$698</strong></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="footer">
+        <div>
           <span>
-            Thank you!<br />
+            <strong>Thank you!</strong>
+            <br />
             If you encounter any issues related to the invoice, you can contact
             us at:
           </span>
+          <br />
           <span>
             Email: <a href="mailto:support@dosh.com.au">support@dosh.com.au</a>
           </span>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="4" class="buttons">
+        </div>
+        <div class="buttons">
           <button>Send Email</button>
           <button>Print</button>
-        </td>
-      </tr>
-    </table>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
